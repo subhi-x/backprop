@@ -24,7 +24,7 @@ for epoch in range(20000):
   o = np.dot(output_weights,h_activate)+output_bias
   o_activate = sigmoid(o)
   MSE= np.square(np.subtract(real_outputs,o_activate)).mean()
-  print(MSE)
+  # print(MSE) (This was to check if there were any changes actually occuring in MSE)
 
   d1=o_activate-real_outputs
   d2=sigmoid_der(o)
